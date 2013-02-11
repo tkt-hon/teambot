@@ -1,6 +1,8 @@
 local _G = getfenv(0)
 local teambot = _G.object
 
+runfile "bots/teambot/tournament_options.lua"
+
 local legionTeamCvar = Cvar.GetCvar("teambotmanager_legion")
 local legionTeam = nil
 local hellbourneTeamCvar = Cvar.GetCvar("teambotmanager_hellbourne")
