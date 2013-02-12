@@ -32,3 +32,7 @@ if IsLegion() then
 else
   RunTeam(hellbourneTeam)
 end
+
+if teambot.Is1v1() and teambot.bGroupAndPush then
+  teambot.bGroupAndPush = false
+end
