@@ -19,10 +19,16 @@ local function IsLegion()
   return teambot:GetTeam() == 1
 end
 
+local function TeamEcho(string)
+  Echo("Team "..tostring(teambot:GetTeam())..": "..string)
+end
+
 local function RunTeam(teamName)
   if teamName and teamName ~= "" then
+    TeamEcho("Loading teambot for "..teamName)
     runfile ("bots/teams/"..teamName.."/teambot.lua")
   else
+    TeamEcho("Loading default teambot")
     runfile "bots/teambot/teambotbrain.lua"
   end
 end
